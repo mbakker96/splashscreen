@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import {Deploy} from 'cordova-plugin-ionic/dist/ngx';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [Deploy]
 })
 export class HomePageModule {}

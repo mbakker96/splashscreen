@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Deploy } from 'cordova-plugin-ionic/dist/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private deploy: Deploy) {
+  }
+
+  getConfig() {
+    this.deploy.getConfiguration().then(config => console.log(config));
+    this.deploy.getAvailableVersions().then(config => console.log(config));
+  }
 
 }
